@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalitreMagico", "salitreMagico\SalitreMagico.csproj", "{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{EC60AFE4-96D2-4B08-B721-A523B280FDCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{01D15068-87CC-4705-9FA0-0D44035C016B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC60AFE4-96D2-4B08-B721-A523B280FDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC60AFE4-96D2-4B08-B721-A523B280FDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC60AFE4-96D2-4B08-B721-A523B280FDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC60AFE4-96D2-4B08-B721-A523B280FDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D15068-87CC-4705-9FA0-0D44035C016B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D15068-87CC-4705-9FA0-0D44035C016B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D15068-87CC-4705-9FA0-0D44035C016B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D15068-87CC-4705-9FA0-0D44035C016B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86EFBFA5-45F2-4C5F-8225-6E6DA7775E35}
+	EndGlobalSection
+EndGlobal
