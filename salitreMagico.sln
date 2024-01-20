@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalitreMagico", "salitreMagico\SalitreMagico.csproj", "{9EE4F92E-DB81-48D4-B8EB-D8997CDBF8DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{EC60AFE4-96D2-4B08-B721-A523B280FDCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controladores", "Controller\Controladores.csproj", "{EC60AFE4-96D2-4B08-B721-A523B280FDCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{01D15068-87CC-4705-9FA0-0D44035C016B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Model\Modelos.csproj", "{01D15068-87CC-4705-9FA0-0D44035C016B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
