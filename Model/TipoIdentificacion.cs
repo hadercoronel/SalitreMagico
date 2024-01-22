@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controladores
+namespace Modelos
 {
-    public class Class1
+    public enum TipoIdentificacion
     {
+        CEDULA = 1,
+        TARJETA_IDENTIDAD,
+        PASAPORTE
     }
 }

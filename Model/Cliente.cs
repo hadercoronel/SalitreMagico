@@ -8,22 +8,24 @@ namespace Modelos
 {
     public class Cliente
     {
+        private int id;
         private string nombre;
-        private int tipo_identificacion;
+        private TipoIdentificacion tipoIdentificacion;
         private string identificacion;
         private string telefono;
         private string correoElectronico;
         private float estatura;
         private int edad;
-        private int responsable;
+        private Cliente responsable;
         private int numeroIngreso;
 
-        public Cliente(string nombre, int tipo_identificacion, string identificacion, 
+        public Cliente(int id, string nombre, TipoIdentificacion tipoIdentificacion, string identificacion, 
                         string telefono, string correoElectronico, float estatura, 
-                        int edad, int responsable, int numeroIngreso)
+                        int edad, Cliente responsable, int numeroIngreso)
         {
+            this.id = id;
             this.nombre = nombre;
-            this.tipo_identificacion = tipo_identificacion;
+            this.tipoIdentificacion = tipoIdentificacion;
             this.identificacion = identificacion;
             this.telefono = telefono;
             this.correoElectronico = correoElectronico;
@@ -33,19 +35,30 @@ namespace Modelos
             this.numeroIngreso = numeroIngreso;
         }
 
-        Cliente()
+        public Cliente()
         { 
         
         }
 
+        public Cliente(string identificacion)
+        {
+            this.identificacion = identificacion;
+        }
+
+        public Cliente(int id)
+        {
+            this.id = id;
+        }
+
+        public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public int Tipo_identificacion { get => tipo_identificacion; set => tipo_identificacion = value; }
+        public TipoIdentificacion TipoIdentificacion { get => tipoIdentificacion; set => tipoIdentificacion = value; }
         public string Identificacion { get => identificacion; set => identificacion = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public string CorreoElectronico { get => correoElectronico; set => correoElectronico = value; }
         public float Estatura { get => estatura; set => estatura = value; }
         public int Edad { get => edad; set => edad = value; }
-        public int Responsable { get => responsable; set => responsable = value; }
+        public Cliente Responsable { get => responsable; set => responsable = value; }
         public int NumeroIngreso { get => numeroIngreso; set => numeroIngreso = value; }
     }
 }
