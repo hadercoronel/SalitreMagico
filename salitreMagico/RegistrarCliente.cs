@@ -28,8 +28,7 @@ namespace salitreMagico
         {
             //llenar combobox 
             CboxTipoIdentificacion.DataSource = Enum.GetValues(typeof(TipoIdentificacion));
-            txtEstatura.KeyPress += new KeyPressEventHandler(txtEstatura_KeyPress);
-
+            //txtEstatura.KeyPress += new KeyPressEventHandler(txtEstatura_KeyPress);
         }
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
@@ -57,7 +56,7 @@ namespace salitreMagico
                             }
                             else { MessageBox.Show("Responsable debe ser mayor de edad."); }
                         }
-                    } else
+                    }else
                     {
                         MessageBox.Show("Debe ingresar un responsable registrado");
                     }
@@ -77,7 +76,9 @@ namespace salitreMagico
             }
         }
 
-
+        /// <summary>
+        /// se asignan los valores de los text al cliente.
+        /// </summary>
         private void mapearCliente ()
         {
             cliente.Nombre = txtNombre.Text;
@@ -170,6 +171,11 @@ namespace salitreMagico
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

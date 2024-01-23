@@ -96,7 +96,9 @@
     <Compile Include="ClienteAdmin.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="MainController.cs" />
+    <Compile Include="PasaporteAdmin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioAdmin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

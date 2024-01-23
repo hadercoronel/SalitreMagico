@@ -6,27 +6,33 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    internal class Empleado
+    public class Empleado
     {
-        private int tipoEmpleado;
+        private int id;
+        private int tipoIdentificacion;
         private string nombre;
         private string identificacion;
         private string telefono;
         private string correoElectronico;
         private int edad;
 
-        public Empleado(int tipoEmpleado, string nombre, string identificacion, 
-                        string telefono, string correoElectronico, int edad)
+        public Empleado(int id, int tipoIdentificacion, string nombre, string identificacion, string telefono, string correoElectronico, int edad)
         {
-            this.tipoEmpleado = tipoEmpleado;
+            this.id = id;
+            this.tipoIdentificacion = tipoIdentificacion;
             this.nombre = nombre;
             this.identificacion = identificacion;
             this.telefono = telefono;
             this.correoElectronico = correoElectronico;
             this.edad = edad;
         }
-
-        public int TipoEmpleado { get => tipoEmpleado; set => tipoEmpleado = value; }
+        public Empleado() { }
+        public Empleado(string identificacion)
+        {
+            this.identificacion = identificacion;
+        }
+        public int Id { get => id; set => id = value; }
+        public int TipoIdentificacion { get => tipoIdentificacion; set => tipoIdentificacion = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Identificacion { get => identificacion; set => identificacion = value; }
         public string Telefono { get => telefono; set => telefono = value; }

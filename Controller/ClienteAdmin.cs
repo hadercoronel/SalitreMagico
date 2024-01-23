@@ -17,30 +17,35 @@ namespace Controladores
         /// Consulta todos los datos de la tabla
         /// </summary>
         /// <returns>datos de la tabla cliente</returns>
-        public IEnumerable<Cliente> Consultar()
+        public List<Cliente> Consultar()
         {
             Conectar();
             List<Cliente> lista = new List<Cliente>();
+            Cliente modelo = null;
             try
             {
-                MySqlCommand comando = new MySqlCommand("spconsultar", cnn);
-                comando.CommandType = System.Data.CommandType.StoredProcedure;
+                var comando = cnn.CreateCommand();
+                comando.CommandText = @"SELECT nombre, tipo_identificacion, identificacion, telefono, correo_electronico," +
+                    "estatura, edad, responsable, numero_ingreso, id_cliente FROM cliente";
                 MySqlDataReader lector = comando.ExecuteReader();
-                while (lector.Read())
+                if (lector != null && lector.HasRows)
                 {
-                    Cliente modelo = new Cliente()
+                    while (lector.Read())
                     {
-                        Nombre = (lector[0] + ""),
-                        TipoIdentificacion = (TipoIdentificacion)Enum.Parse(typeof(TipoIdentificacion), lector[1] + ""),
-                        Identificacion = (lector[2] + ""),
-                        Telefono = (lector[3] + ""),
-                        CorreoElectronico = (lector[4] + ""),
-                        Estatura = float.Parse(lector[5] + ""),
-                        Edad = int.Parse(lector[6] + ""),
-                        Responsable = new Cliente(int.Parse(lector[7] + "")),
-                        NumeroIngreso = int.Parse(lector[8] + ""),
-                    };
-                    lista.Add(modelo);
+                        modelo = new Cliente();
+                        modelo = new Cliente();
+                        modelo.Nombre = (lector[0] + "");
+                        modelo.TipoIdentificacion = (TipoIdentificacion)Enum.Parse(typeof(TipoIdentificacion), lector[1] + "");
+                        modelo.Identificacion = (lector[2] + "");
+                        modelo.Telefono = (lector[3] + "");
+                        modelo.CorreoElectronico = (lector[4] + "");
+                        modelo.Estatura = float.Parse(lector[5] + "");
+                        modelo.Edad = int.Parse(lector[6] + "");
+                        modelo.Responsable = lector[7] == null ? new Cliente(int.Parse(lector[7] + "")) : null;
+                        modelo.NumeroIngreso = int.Parse(lector[8] + "");
+                        modelo.Id = int.Parse(lector[9] + "");
+                        lista.Add(modelo);
+                    }
                 }
             }
             catch (Exception ex)

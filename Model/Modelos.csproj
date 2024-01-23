@@ -97,20 +97,21 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EntradaParque.cs" />
-    <Compile Include="Estacion.cs" />
+    <Compile Include="Enums\Estacion.cs" />
+    <Compile Include="Enums\Estado.cs" />
+    <Compile Include="Enums\Rol.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="HorarioLaboral.cs" />
     <Compile Include="Pasaporte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoIdentificacion.cs" />
-    <Compile Include="TipoPasaporte.cs" />
+    <Compile Include="Enums\TipoIdentificacion.cs" />
+    <Compile Include="Enums\TipoPasaporte.cs" />
     <Compile Include="Turno.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

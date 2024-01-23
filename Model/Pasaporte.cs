@@ -6,37 +6,41 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    internal class Pasaporte
+    public class Pasaporte
     {
-        private int numeroTicket;
+        private int id;
+        private TipoPasaporte tipoPasaporte;
         private DateTime fecha;
-        private DateTime horaEntrada;
-        private int idEstacion;
-        private int idCliente;
-        private int idTipoPasaporte;
-        private float descuento;
-        private float totalPagar;
+        private string descripcion;
+        private decimal precio;
+        private Cliente cliente;
+        private Estacion numeroEstacion;
+        private Estado estado;
+        private Empleado empleado;
 
-        public Pasaporte(int numeroTicket, DateTime fecha, DateTime horaEntrada, int idEstacion, 
-                         int idCliente, int idTipoPasaporte, float descuento, float totalPagar)
+        public Pasaporte(int id, TipoPasaporte tipoPasaporte, DateTime fecha, string descripcion, 
+            decimal precio, Cliente cliente, Estacion numeroEstacion, Estado estado, Empleado empleado)
         {
-            this.numeroTicket = numeroTicket;
+            this.id = id;
+            this.tipoPasaporte = tipoPasaporte;
             this.fecha = fecha;
-            this.horaEntrada = horaEntrada;
-            this.idEstacion = idEstacion;
-            this.idCliente = idCliente;
-            this.idTipoPasaporte = idTipoPasaporte;
-            this.descuento = descuento;
-            this.totalPagar = totalPagar;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            this.cliente = cliente;
+            this.numeroEstacion = numeroEstacion;
+            this.estado = estado;
+            this.empleado = empleado;
         }
+        public Pasaporte() { }
 
-        public int NumeroTicket { get => numeroTicket; set => numeroTicket = value; }
+        public int Id { get => id; set => id = value; }
+        public TipoPasaporte TipoPasaporte { get => tipoPasaporte; set => tipoPasaporte = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
-        public DateTime HoraEntrada { get => horaEntrada; set => horaEntrada = value; }
-        public int IdEstacion { get => idEstacion; set => idEstacion = value; }
-        public int IdCliente { get => idCliente; set => idCliente = value; }
-        public int IdTipoPasaporte { get => idTipoPasaporte; set => idTipoPasaporte = value; }
-        public float Descuento { get => descuento; set => descuento = value; }
-        public float TotalPagar { get => totalPagar; set => totalPagar = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public decimal Precio { get => precio; set => precio = value; }
+        public Cliente Cliente { get => Cliente; set => Cliente = value; }
+        public Estacion NumeroEstacion { get => numeroEstacion; set => numeroEstacion = value; }
+        public Estado Estado { get => estado; set => estado = value; }
+        public Empleado Empleado { get => Empleado; set => Empleado = value; }
     }
 }

@@ -16,7 +16,7 @@ namespace salitreMagico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistrarCliente());
+            Application.Run(new Login());
         }
     }
 }
