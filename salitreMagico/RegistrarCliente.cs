@@ -28,7 +28,6 @@ namespace salitreMagico
         {
             //llenar combobox 
             CboxTipoIdentificacion.DataSource = Enum.GetValues(typeof(TipoIdentificacion));
-            //txtEstatura.KeyPress += new KeyPressEventHandler(txtEstatura_KeyPress);
         }
 
         private void BtnRegistrar_Click(object sender, EventArgs e)
