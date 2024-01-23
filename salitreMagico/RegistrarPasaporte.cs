@@ -113,7 +113,7 @@ namespace salitreMagico
                     {
                             response = pasaporteAdmin.Guardar(pasaporte);
                             MessageBox.Show(response);
-                            limpiarText(this);
+                            txtIdCliente.Clear();
                     }
                 }
                 else
@@ -132,27 +132,10 @@ namespace salitreMagico
             pasaporte.NumeroEstacion = (Estacion)Enum.Parse(typeof(Estacion), cboxEstacion.Text);
             pasaporte.Fecha = cboxFecha.Value;
             pasaporte.Estado = (Estado)Enum.Parse(typeof(Estado), cboxEstado.Text);
+            pasaporte.Descripcion= txtDescripcion.Text;
             pasaporte.Precio = decimal.Parse(txtPrecioRegular.Text);
             pasaporte.Cliente = new Cliente(txtIdCliente.Text);
-            pasaporte.Empleado = new Empleado(txtIdVendedor.Text);
-        }
-        /// <summary>
-        /// funcion limpiar campos de texto
-        /// </summary>
-        /// <param name="control"></param>
-        private void limpiarText(Control control)
-        {
-            foreach (var txt in control.Controls)
-            {
-                if (txt is TextBox)
-                {
-                    ((TextBox)txt).Clear();
-                }
-                else if (txt is ComboBox)
-                {
-                    ((ComboBox)txt).SelectedIndex = 0;
-                }
-            }
+            pasaporte.Empleado = new Empleado(int.Parse(txtIdVendedor.Text));
         }
     }
 }

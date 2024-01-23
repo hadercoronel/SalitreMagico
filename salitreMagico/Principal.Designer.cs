@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.ingresarParqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarToolStripMenuItem});
+            this.registrarToolStripMenuItem,
+            this.ingresarParqueToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -119,6 +121,13 @@
             this.lblNombreUsuario.Size = new System.Drawing.Size(0, 18);
             this.lblNombreUsuario.TabIndex = 3;
             // 
+            // ingresarParqueToolStripMenuItem
+            // 
+            this.ingresarParqueToolStripMenuItem.Name = "ingresarParqueToolStripMenuItem";
+            this.ingresarParqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresarParqueToolStripMenuItem.Text = "Ingresar Parque";
+            this.ingresarParqueToolStripMenuItem.Click += new System.EventHandler(this.ingresarParqueToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +160,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label lblNombreUsuario;
+        private System.Windows.Forms.ToolStripMenuItem ingresarParqueToolStripMenuItem;
     }
 }

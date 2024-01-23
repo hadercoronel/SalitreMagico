@@ -57,5 +57,12 @@ namespace salitreMagico
         {
 
         }
+
+        private void ingresarParqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IngresoParque ingresoParque = new IngresoParque();
+            ingresoParque.Show();
+            
+        }
     }
 }

@@ -31,6 +31,11 @@ namespace Modelos
         {
             this.identificacion = identificacion;
         }
+
+        public Empleado(int id)
+        {
+            this.id = id;
+        }
         public int Id { get => id; set => id = value; }
         public int TipoIdentificacion { get => tipoIdentificacion; set => tipoIdentificacion = value; }
         public string Nombre { get => nombre; set => nombre = value; }

@@ -140,6 +140,10 @@ namespace Controladores
 
                         comando.Parameters.AddWithValue("@numero_ingreso", 1);
                         comando.ExecuteNonQuery();
+                        Desconectar();
+                        Cliente nuevo = ConsultarCliente(cliente.Identificacion);
+                        Conectar();
+                        IngresarParque(nuevo.Id);
                     }
                     else
                     {
@@ -149,6 +153,8 @@ namespace Controladores
                         comando.Parameters.AddWithValue("@identificacion", cliente.Identificacion);
                         comando.Parameters.AddWithValue("@numero_ingreso", existe.NumeroIngreso + 1);
                         comando.ExecuteNonQuery();
+
+                        IngresarParque(existe.Id);
                     }
                 }
             } catch (Exception ex)
@@ -160,6 +166,61 @@ namespace Controladores
                 Desconectar();
             }
             return msg;
+        }
+
+        public string UpdateCliente(Cliente cliente)
+        {
+            string msg = "Guardado";
+            try
+            {
+                if (cliente != null)
+                {
+                    Cliente existe = ConsultarCliente(cliente.Identificacion);
+                    Conectar();
+                    if (existe != null)
+                    {
+                        var comando = cnn.CreateCommand();
+                        comando.CommandText = @"UPDATE cliente SET numero_ingreso = @numero_ingreso " +
+                            "wHERE identificacion = @identificacion";
+                        comando.Parameters.AddWithValue("@identificacion", cliente.Identificacion);
+                        comando.Parameters.AddWithValue("@numero_ingreso", existe.NumeroIngreso + 1);
+                        comando.ExecuteNonQuery();
+
+
+                        IngresarParque(existe.Id);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                msg = "Ocurrio un error consulte con el admin " + ex.Message;
+                Console.WriteLine(ex.StackTrace);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return msg;
+        }
+
+        public void IngresarParque(int id)
+        {
+            try
+            {
+                
+                var comando = cnn.CreateCommand();
+                comando.CommandText = @"INSERT ingreso_parque INTO (fecha, hora, id_cliente  )" +
+                    "VALUES (@fecha, @hora, @id_cliente)";
+                comando.Parameters.AddWithValue("@fecha", "fecha");
+                comando.Parameters.AddWithValue("@hora", "");
+                comando.Parameters.AddWithValue("@id_cliente", id);
+                comando.ExecuteNonQuery();
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
         }
     }
 }

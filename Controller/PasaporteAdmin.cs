@@ -31,7 +31,7 @@ namespace Controladores
                         var comando = cnn.CreateCommand();
                         comando.CommandText = @"INSERT INTO pasaporte (tipo_pasaporte, fecha, descripcion, precio_regular," +
                             "id_cliente, numero_estacion, estado, id_empleado) VALUES (@tipo_pasaporte, @fecha, @descripcion, @precio_regular," +
-                            " @id_cliente, @numero_estacion, @estado, id_empleado)";
+                            " @id_cliente, @numero_estacion, @estado, @id_empleado)";
                         comando.Parameters.AddWithValue("@tipo_pasaporte", pasaporte.TipoPasaporte);
                         comando.Parameters.AddWithValue("@fecha", pasaporte.Fecha);
                         comando.Parameters.AddWithValue("@descripcion", pasaporte.Descripcion);
@@ -57,7 +57,7 @@ namespace Controladores
                 msg = "Ocurrio un error consulte con el admin " + ex.Message;
                 Console.WriteLine(ex.StackTrace);
             }
-            finally
+            finally 
             {
                 Desconectar();
             }

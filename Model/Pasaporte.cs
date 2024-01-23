@@ -38,9 +38,9 @@ namespace Modelos
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public decimal Precio { get => precio; set => precio = value; }
-        public Cliente Cliente { get => Cliente; set => Cliente = value; }
+        public Cliente Cliente { get => cliente; set => cliente = value; }
         public Estacion NumeroEstacion { get => numeroEstacion; set => numeroEstacion = value; }
         public Estado Estado { get => estado; set => estado = value; }
-        public Empleado Empleado { get => Empleado; set => Empleado = value; }
+        public Empleado Empleado { get => empleado; set => empleado = value; }
     }
 }

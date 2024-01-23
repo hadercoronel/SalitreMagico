@@ -53,6 +53,7 @@
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(129, 20);
             this.txtIdentificacion.TabIndex = 1;
+            this.txtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentificacion_KeyPress);
             // 
             // btnVerificar
             // 
@@ -62,6 +63,7 @@
             this.btnVerificar.TabIndex = 2;
             this.btnVerificar.Text = "Verificar";
             this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // label2
             // 
@@ -97,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "IngresoParque";
             this.Text = "IngresoParque";
+            this.Load += new System.EventHandler(this.IngresoParque_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
