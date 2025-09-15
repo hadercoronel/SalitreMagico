@@ -64,5 +64,11 @@ namespace salitreMagico
             ingresoParque.Show();
             
         }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TablaCliente tablaCliente = new TablaCliente();
+            tablaCliente.Show();
+        }
     }
 }

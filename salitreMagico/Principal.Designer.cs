@@ -33,11 +33,12 @@
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarPasaporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarParqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.ingresarParqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarToolStripMenuItem,
-            this.ingresarParqueToolStripMenuItem});
+            this.ingresarParqueToolStripMenuItem,
+            this.reporteToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -73,16 +75,37 @@
             // registrarClienteToolStripMenuItem
             // 
             this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
-            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.registrarClienteToolStripMenuItem.Text = "Registrar Cliente";
             this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // registrarPasaporteToolStripMenuItem
             // 
             this.registrarPasaporteToolStripMenuItem.Name = "registrarPasaporteToolStripMenuItem";
-            this.registrarPasaporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarPasaporteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.registrarPasaporteToolStripMenuItem.Text = "Registrar Pasaporte";
             this.registrarPasaporteToolStripMenuItem.Click += new System.EventHandler(this.registrarPasaporteToolStripMenuItem_Click);
+            // 
+            // ingresarParqueToolStripMenuItem
+            // 
+            this.ingresarParqueToolStripMenuItem.Name = "ingresarParqueToolStripMenuItem";
+            this.ingresarParqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ingresarParqueToolStripMenuItem.Text = "Ingresar Parque";
+            this.ingresarParqueToolStripMenuItem.Click += new System.EventHandler(this.ingresarParqueToolStripMenuItem_Click);
+            // 
+            // reporteToolStripMenuItem
+            // 
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteToolStripMenuItem.Text = "Historial Cliente";
+            this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -105,13 +128,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Bienvenidos";
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
@@ -120,13 +136,6 @@
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(0, 18);
             this.lblNombreUsuario.TabIndex = 3;
-            // 
-            // ingresarParqueToolStripMenuItem
-            // 
-            this.ingresarParqueToolStripMenuItem.Name = "ingresarParqueToolStripMenuItem";
-            this.ingresarParqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ingresarParqueToolStripMenuItem.Text = "Ingresar Parque";
-            this.ingresarParqueToolStripMenuItem.Click += new System.EventHandler(this.ingresarParqueToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -161,5 +170,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.ToolStripMenuItem ingresarParqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
     }
 }
