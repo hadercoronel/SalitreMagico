@@ -12,7 +12,7 @@ namespace Controladores
     {
        
         /// <summary>
-        /// Se guardan los datos de los pasaportes comprados
+        /// Se guardan los datos de los pasaportes comprado
         /// </summary>
         /// <param name="cliente"></param>
         /// <returns>Mensaje de guardado.</returns>
